@@ -8,10 +8,6 @@ export default defineConfig({
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split('.')[1];
-          //Webフォントファイルの振り分け
-          // if (/ttf|otf|eot|woff|woff2/i.test(extType)) {
-          //   extType = 'fonts';
-          // }
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'images';
           }
@@ -24,6 +20,7 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[name].js',
         entryFileNames: 'assets/js/[name].js',
       },
+      chunkSizeWarningLimit: 1600
     },
   },
 });
