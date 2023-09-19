@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { FontLoader} from 'three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+import {gsap} from 'gsap';
+import scrollTrigger from "gsap/ScrollTrigger";
 
 // シーンの作成
 const scene = new THREE.Scene();
@@ -19,9 +21,9 @@ camera.lookAt(new THREE.Vector3(0, 0, 0));
 const controls = new OrbitControls(camera, document.querySelector("canvas"));
 controls.enableDamping = true;
 
-// container
-const container = new THREE.Object3D();
-scene.add(container);
+// textContainer
+const textContainer = new THREE.Object3D();
+scene.add(textContainer);
 
 // const cubeRenderTarget = new THREE.WebGLCubeRenderTarget();
 // const cubeCamera = new THREE.CubeCamera(1, 1000, cubeRenderTarget);
@@ -39,7 +41,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(window.devicePixelRatio);
 // renderer.setClearColor(new THREE.Color(0x666666));
-scene.background = new THREE.Color( 0xcccccc );
+scene.background = new THREE.Color( 0xe9eef0 );
 
 //axisHelper
 const axesHelper = new THREE.AxesHelper(5);
@@ -47,7 +49,6 @@ scene.add(axesHelper);
 
 //font loader
 const fontLoader = new FontLoader();
-
 fontLoader.load("../fonts/Croissant_One_Regular.json", (font) => {
   const textGeometry = new TextGeometry("HYKW", {
     font: font,
@@ -63,18 +64,22 @@ fontLoader.load("../fonts/Croissant_One_Regular.json", (font) => {
   textGeometry.center();
   
   //material
-  const textMaterial = new THREE.MeshToonMaterial({ color: 0x00ffff,});
+  // const textColor = new THREE.Color({ color: randColor()});
+  const textMaterial = new THREE.MeshToonMaterial({ color: `${randColor()}`,});
+  // textMaterial.color = new THREE.Color({ color: randColor()});
+  // console.log(textMaterial);
+  // const textMaterial = new THREE.MeshToonMaterial({ color: 0x00ffff,});
   //mesh
   const text = new THREE.Mesh(textGeometry, textMaterial);
   // text.castShadow = true;
-  container.add(text); 
+  textContainer.add(text); 
   // scene.add(text);
 });
 
-function moveGeomerty() {
+// function moveGeomerty() {
     
-}
-moveGeomerty();
+// }
+// moveGeomerty();
 
 
 
@@ -94,6 +99,15 @@ moveGeomerty();
 // const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 // シーンに追加する。
 // scene.add(sphere);
+
+
+//random color generator
+function randColor() {
+  const rand = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  return `hsl(${rand(0, 100)}, 100%, 70%)`;
+}
 
 //light
 const ambLight = new THREE.AmbientLight(0xffffff, .1);
@@ -116,7 +130,7 @@ function animate() {
   controls.update();
   requestAnimationFrame(animate);
   moveLight();
-  container.rotation.y += 0.005;
+  textContainer.rotation.y += 0.005;
 }
 animate();
 
@@ -135,7 +149,81 @@ addEventListener("resize", () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
 
+//gsap scroll animation
+gsap.registerPlugin(scrollTrigger);
+// gsap.set(textContainer, {
+//   z: 3,
+//   rotationX: 0, 
+// });
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.main',
+    start: 'top center',
+    markers: true,
+    // end:'bottom 100%',
+    scrub:true,
+    toggleActions:'play none none reverse',
+  }
+})
+.to(textContainer.position, {
+  z:3,
+  // duration: 1,
+})
+// .to(textContainer.rotation, {
+//   z: 5,
+//   // duration: 3,
+// })
+// .to(textContainer.rotation, {
+//   z: 0,
+//   duration: 3,
+// })
+// .to(textContainer.position, {
+//   // alpha: true,
+//   duration: 3,
+// }, '<');
 
+
+
+// gsap.fromTo(textContainer.rotation, {
+//   x:5,
+// }, {
+//   x: 0,
+//   scrollTrigger: {
+//     trigger: '.section-works',
+//     start: 'top center',
+//     markers: true,
+//     scrub:true,
+//     toggleActions:'play none none reverse',
+//   }, 
+// }
+// );
+// gsap.fromTo(textContainer.rotation, {
+//   x:5,
+// }, {
+//   x: 0,
+//   scrollTrigger: {
+//     trigger: '.section-works',
+//     start: 'top center',
+//     markers: true,
+//     scrub:true,
+//     toggleActions:'play none none reverse',
+//   }, 
+// }
+// );
+// gsap.fromTo(textContainer.position, {
+//   z: 3,
+//   // duration: 1,
+//   scrollTrigger: {
+//     trigger: '.section-works',
+//     start: 'top center',
+//     markers: true,
+//     scrub:true,
+//     toggleActions:'play none none reverse',
+//   }
+// },
+// {
+//   z: 0,
+// });
 
 // const targetElems = document.querySelectorAll('.section');
   

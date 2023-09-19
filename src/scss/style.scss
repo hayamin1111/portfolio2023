@@ -2,12 +2,13 @@
 @use "./normalize.scss";
 
 //variables
-$color-main-blue: #404A72;
+$color-main-blue: #1a1c1c;
 $color-main-orange: #EB6137;
 $color-main-beige: #F8E9D1;
 $color-base: #CCDFEF;
-$color-black: #000;
+$color-black: #1a1c1c;
 $color-white: #fff;
+$color-white01: #e9eef0;
 
 html {
   font-size: 62.5%;
@@ -103,18 +104,32 @@ body {
 
 // section
 .section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
   // position: relative;
-  height: 100svh;
+  // height: 100svh;
   
   &__inner {
-    padding: 30px;
+    margin: 5rem 2rem;
+    padding: 3rem;
+    // background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(.5rem);
+    border: .1rem solid rgba(255, 255, 255, 0.4);
+    border-right-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
   }
 
   &__heading {
+    margin-top: 0;
+    margin-bottom: 3rem;
     font-size: 64px;
     font-family: 'Bona Nova', serif;
+  }
+
+  &__heading_sub {
+    margin-left: 2rem;
+    font-size: 32px;
   }
 
   &__layout_has-col {
