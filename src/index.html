@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emi Hayakawa Portfolio</title>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Shippori+Mincho&display=swap" rel="stylesheet"> -->
+  <meta name=”robots” content=”noindex,nofollow”>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Bona+Nova&family=Shippori+Mincho&display=swap" rel="stylesheet">
@@ -14,146 +12,168 @@
   </head>
   <body>
     <header class="header"><strong class="header__logo">HYKW</strong></header>
-      <section>
-        <div class="first-view">
-          <h1 class="first-view__heading">Emi Hayakawa Portfolio</h1>
-          <p class="first-view__lead">I’m Emi Hayakawa who is Web Coder &amp; Designer. This is My Website to Introduce Myself.</p>
+      <div class="first-view">
+        <h1 class="first-view__heading">Emi Hayakawa Portfolio</h1>
+        <p class="first-view__lead">I’m Emi Hayakawa who is Web Coder &amp; Designer. <br class="break__sp">This is My Website to Introduce Myself.</p>
+      </div>
+      <main class="main">
+      <section class="section section-about">
+        <div class="section__inner">
+          <h2 class="section__heading">About Me</h2>
+          <ul class="list">
+            <li class="list__item">1989年生まれ</li>
+            <li class="list__item">香川県高松市出身</li>
+            <li class="list__item">埼玉県在住</li>
+            <li class="list__item">職歴
+              <ul class="list-child">
+                <li class="list-child__item">前職 左官職人（4年弱）</li>
+                <li class="list-child__item">現職 Webコーダー兼デザイナー（4年）</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="list">
+            <li class="list__item">長所：好奇心旺盛</li>
+            <li class="list__item">短所：完璧主義、優柔不断</li>
+            <li class="list__item">趣味：毎朝の散歩、読書（ミステリー）、イラスト制作、ゲーム</li>
+            <li class="list__item">最近成し遂げたこと：半年で5キロのダイエットに成功（継続中）</li>
+          </ul>
         </div>
       </section>
-        <main class="main">
-        <section class="section section-about">
-          <div class="section__inner">
-            <h2 class="section__heading">About Me</h2>
-            <ul class="list">
-              <li class="list__item">1989年生まれ</li>
-              <li class="list__item">香川県高松市出身</li>
-              <li class="list__item">埼玉県在住</li>
-              <li class="list__item">職歴
-                <ul class="list-child">
-                  <li class="list-child__item">前職 左官職人（4年弱）</li>
-                  <li class="list-child__item">現職 Webコーダー兼デザイナー（4年）</li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="list">
-              <li class="list__item">長所：好奇心旺盛</li>
-              <li class="list__item">短所：完璧主義、優柔不断</li>
-              <li class="list__item">趣味：Webサイトのソースコード閲覧、イラスト制作（最近は水彩画）、<br>毎朝の散歩、読書（ミステリー）、ゲーム</li>
-              <li class="list__item">最近成し遂げたこと：半年で5キロのダイエットに成功（継続中）</li>
-            </ul>
+      <section class="section section-ex">
+        <div class="section__inner">
+          <h2 class="section__heading">My Experience</h2>
+          <div class="section__layout_has-col">
+            <section class="sub-section section__layout-item">
+              <h3 class="sub-section__heading">実務での経験</h3>
+              <ul class="list">
+                <li class="list__item">Webサイト制作時の顧客折衝、提案、ワイヤーフレーム作成、外部／内部デザイナー・コーダーへの指示</li>
+                <li class="list__item">Webデザイン</li>
+                <li class="list__item">マークアップ・コーディング</li>
+                <li class="list__item">Webサイトの更新業務</li>
+                <li class="list__item">バナー制作</li>
+                <li class="list__item">Googleアナリティクス（UA）での解析レポート作成</li>
+              </ul>
+              <dl class="desc">
+                <dt class="desc__title">Web技術</dt>
+                <dd class="desc__text">HTML、CSS、SCSS、JavaScript、jQuery</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">CSS設計</dt>
+                <dd class="desc__text">BEM</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">ツール</dt>
+                <dd class="desc__text">Adobe Photoshop、Adobe Illustrator、XD</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">環境</dt>
+                <dd class="desc__text">Gulp、Git Lab、SourceTree（現在は使用していない）</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">その他</dt>
+                <dd class="desc__text">Chatwork、Backlog</dd>
+              </dl>
+            </section>
+            <section class="sub-section section__layout-item">
+              <h3 class="sub-section__heading">個人での経験（挑戦中）</h3>
+              <dl class="desc">
+                <dt class="desc__title">Web技術</dt>
+                <dd class="desc__text">GSAP、WordPress、Three.js、WebGL</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">CSS設計</dt>
+                <dd class="desc__text">FLOCSS</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">ツール</dt>
+                <dd class="desc__text">Figma</dd>
+              </dl>
+              <dl class="desc">
+                <dt class="desc__title">環境</dt>
+                <dd class="desc__text">Github、Webpack、Vite</dd>
+              </dl>
+            </section>
           </div>
-          <!-- <div class="bg-svg bg-svg__01" id="js-bgSvgAbout">
-            <svg id="svgCircle" viewBox="0 0 240 240" width="240" height="240" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g fill="#EB6137"><circle r="120" cx="120" cy="120"></circle></g></svg>
-          </div> -->
-        </section>
-        <section class="section section-ex">
-          <div class="section__inner">
-            <h2 class="section__heading">My Experience</h2>
-            <div class="section__layout_has-col">
-              <section class="sub-section section__layout-item">
-                <h3>実務での経験</h3>
-                <ul class="list">
-                  <li class="list__item">Webサイト制作時の顧客折衝、提案、ワイヤーフレーム作成、外部／内部デザイナー・コーダーへの指示、デザイン・マークアップ・コーディング</li>
-                  <li class="list__item">Webサイトの更新業務</li>
-                  <li class="list__item">バナー制作</li>
-                  <li class="list__item">Googleアナリティクス（UA）での解析レポート作成</li>
-                </ul>
-                <dl class="desc">
-                  <dt class="desc__title">Web技術</dt>
-                  <dd class="desc__text">HTML、CSS、SCSS、JavaScript、jQuery</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">CSS設計</dt>
-                  <dd class="desc__text">BEM</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">ツール</dt>
-                  <dd class="desc__text">Adobe Photoshop、Adobe Illustrator、XD</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">環境</dt>
-                  <dd class="desc__text">Gulp、Git Lab、SourceTree（現在は使用していない）</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">その他</dt>
-                  <dd class="desc__text">Chatwork、Backlog</dd>
-                </dl>
-              </section>
-              <section class="sub-section section__layout-item">
-                <h3>個人での経験（挑戦中）</h3>
-                <dl class="desc">
-                  <dt class="desc__title">Web技術</dt>
-                  <dd class="desc__text">GSAP、WordPress、Three.js、WebGL</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">CSS設計</dt>
-                  <dd class="desc__text">FLOCSS</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">ツール</dt>
-                  <dd class="desc__text">Figma</dd>
-                </dl>
-                <dl class="desc">
-                  <dt class="desc__title">環境</dt>
-                  <dd class="desc__text">Git、Github、Webpack</dd>
-                </dl>
-              </section>
-            </div>
+        </div>
+      </section>
+      <section class="section section-works">
+        <div class="section__inner">
+          <h2 class="section__heading">My Works<span class="section__heading_sub">Website</span></h2>
+          <div class="cards">
+            <a href="https://e-hykw.com/daydream/" target="_blank" class="card">
+              <p class="card__title">趣味のイラストを公開しているサイト</p>
+              <p class="card__text">HTML／CSS／JavaScript／GSAP／Swiper</p>
+              <img src="./img/img-website_daydream.jpg" alt="趣味のイラストサイトサムネイル" class="card__image">
+            </a>
+            <a href="https://e-hykw.com/blog/" target="_blank" class="card">
+              <p class="card__title">個人ブログ</p>
+              <p class="card__text">HTML／CSS／JavaScript／WordPress</p>
+              <img src="./img/img-website_blog.jpg" alt="個人ブログサムネイル" class="card__image">
+            </a>
+            <a href="https://e-hykw.com/lab01/index.html" target="_blank" class="card">
+              <p class="card__title">趣味で作ったパララックス風サイト</p>
+              <p class="card__text">HTML／CSS／JavaScript</p>
+              <img src="./img/img-website_parallax.jpg" alt="趣味で作ったサイトサムネイル" class="card__image">
+            </a>
           </div>
-        </section>
-        <section class="section section-works">
-          <div class="section__inner">
-            <h2 class="section__heading">My Works<span class="section__heading_sub">Website</span></h2>
-            <div>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">趣味のイラストを公開しているサイト<br>使用技術：HTML、CSS、JavaScript、GSAP、Swiper</p>
-              </a>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">個人ブログ<br>使用技術：HTML、CSS、JavaScript、WordPress</p>
-              </a>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">趣味で作ったサイト<br>使用技術：HTML、CSS、JavaScript</p>
-              </a>
-            </div>
+          <!-- cards -->
+        </div>
+        <!-- section__inner -->
+      </section>
+      <section class="section section-works">
+        <div class="section__inner">
+          <h2 class="section__heading">My Works<span class="section__heading_sub">Codepen</span></h2>
+          <div class="cards">
+            <a href="https://codepen.io/hayamine01/pen/MWPzRPa" target="_blank" class="card">
+              <p class="card__title">ウェーブするパネル</p>
+              <p class="card__text">Three.js</p>
+              <img src="./img/img-codepen_panel.jpg" alt="ウェーブするパネルのサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/xxmwPZv" target="_blank" class="card">
+              <p class="card__title">追加・削除できるボックス</p>
+              <p class="card__text">Three.js</p>
+              <img src="./img/img-codepen_boxes.jpg" alt="キラキラ光るボックスのサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/vYVQVZM" target="_blank" class="card">
+              <p class="card__title">動くボックス</p>
+              <p class="card__text">Three.jst</p>
+              <img src="./img/img-codepen_square.jpg" alt="水平移動するボックスのサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/JjwPEbO" target="_blank" class="card">
+              <p class="card__title">回転する球</p>
+              <p class="card__text">Three.js</p>
+              <img src="./img/img-codepen_rotate_ball.jpg" alt="回転する球のサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/KKrXMXV" target="_blank" class="card">
+              <p class="card__title">うねうねする円</p>
+              <p class="card__text">Three.js</p>
+              <img src="./img/img-codepen_uneune.jpg" alt="うねうね動く円のサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/LYWPMmL" target="_blank" class="card">
+              <p class="card__title">パーティクル</p>
+              <p class="card__text">Canvas／JavaScrip</p>
+              <img src="./img/img-codepen_particle.jpg" alt="パーティクルサムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/jOqJGYB" target="_blank" class="card">
+              <p class="card__title">四方に当たると色の変わる球</p>
+              <p class="card__text">Canvas／JavaScrip</p>
+              <img src="./img/img-codepen_balls.jpg" alt="四方に当たると色の変わる球サムネイル" class="card__image">
+            </a>
+            <a href="https://codepen.io/hayamine01/pen/ZEzXMjy" target="_blank" class="card">
+              <p class="card__title">CSSアニメーション</p>
+              <p class="card__text">HTML、CSS</p>
+              <img src="./img/img-codepen_css.jpg" alt="CSSアニメーションのサムネイル" class="card__image">
+            </a>
           </div>
-        </section>
-        <section class="section section-works">
-          <div class="section__inner">
-            <h2 class="section__heading">My Works<span class="section__heading_sub">Codepen</span></h2>
-            <div>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">Three.js練習01</p>
-              </a>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">Three.js練習02</p>
-              </a>
-              <a href="" class="card">
-                <img src="" alt="" class="card__image">
-                <p class="card__text">Three.js練習03</p>
-              </a>
-            </div>
-          </div>
-        </section>
-        <!-- <section class="section section-thanks"> -->
-          <!-- <div class="section__inner"> -->
-            <h2 class="section__heading">Thank you for Visiting.</h2>
-          <!-- </div> -->
-          <p><small>&copy;Emi Hayakawa</small></p>
-        <!-- </section> -->
-      <p class="scroll">
-        <em class="scroll__text">SCROLL</em>&nbsp;
-        <span class="scroll__count">
-          <span class="scroll__current" id="js-scroll_count">1</span> / 5
-        </span>
-      </p>
+          <!-- cards -->
+        </div>
+        <!-- section__inner -->
+      </section>
     </main>
+    <footer>
+      <p class="copyright"><small>&copy;Hayakawa</small></p>
+    </footer>
     <canvas class="canvas"></canvas>
     <script type="module" src="./js/main.js"></script>
-    <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js" defer></script> -->
   </body>
 </html>
