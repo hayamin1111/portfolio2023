@@ -36,6 +36,10 @@ ul {
   list-style-type: none;
 }
 
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
 //break
 .break__sp {
   display: none;
@@ -128,7 +132,7 @@ ul {
     border-radius: 2rem;
     @media (max-width: 768px) {
       margin: 4rem 1rem;
-      padding: 1rem;
+      padding: 2rem 1rem;
       border-radius: 1rem;
     }
   }
